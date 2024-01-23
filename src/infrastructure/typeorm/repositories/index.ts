@@ -7,10 +7,13 @@ import { IMantenimientoRepository } from '../../../domain/repositories/imantenim
 import { MantenimientoRepository } from './mantenimiento.repository';
 import { IInventarioRepository } from '../../../domain/repositories/iinventario.repository';
 import { InventarioRepository } from './inventario.repository';
+import { IUbicacionRepository } from 'src/domain/repositories/iubicacion.repository';
+import { UbicacionRepository } from './ubicacion.repository';
 
 export const RepositoryProvider: Provider[] = [
   { provide: IUserRepository, useClass: UserRepository },
   { provide: IActivoRepository, useClass: ActivoRepository },
   { provide: IMantenimientoRepository, useClass: MantenimientoRepository },
   { provide: IInventarioRepository, useClass: InventarioRepository },
+  { provide: IUbicacionRepository, useClass: UbicacionRepository },
 ];

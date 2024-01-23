@@ -24,6 +24,7 @@ export class UpdateActivoHandler
       activoDto.valorLibro,
       activoDto.valorMercado,
       activoDto.estado,
+      activoDto.ubicacion,
     );
     newActivo.id = activoId;
     const savedActivo = this.publisher.mergeObjectContext(

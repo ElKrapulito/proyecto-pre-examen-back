@@ -5,6 +5,7 @@ import { ActivoEntity } from './typeorm/config/activo.entity';
 import { InventarioEntity } from './typeorm/config/inventario.entity';
 import { MantenimientoEntity } from './typeorm/config/mantenimiento';
 import { RepositoryProvider } from './typeorm/repositories';
+import { UbicacionEntity } from './typeorm/config/ubicacion.entity';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { RepositoryProvider } from './typeorm/repositories';
       ActivoEntity,
       InventarioEntity,
       MantenimientoEntity,
+      UbicacionEntity,
     ]),
   ],
   providers: [...RepositoryProvider],

@@ -7,10 +7,13 @@ import { IInventarioFactory } from './inventario/iinventario.factory';
 import { InventarioFactory } from './inventario/inventario.factory';
 import { IMantenimientoFactory } from './mantenimiento/imantenimiento.factory';
 import { MantenimientoFactory } from './mantenimiento/mantenimiento.factory';
+import { IUbicacionFactory } from './ubicacion/iubicacion.factory';
+import { UbicacionFactory } from './ubicacion/ubicacion.factory';
 
 export const FactoriesProvider: Provider[] = [
   { provide: IUserFactory, useClass: UserFactory },
   { provide: IActivoFactory, useClass: ActivoFactory },
   { provide: IInventarioFactory, useClass: InventarioFactory },
   { provide: IMantenimientoFactory, useClass: MantenimientoFactory },
+  { provide: IUbicacionFactory, useClass: UbicacionFactory },
 ];

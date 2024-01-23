@@ -1,3 +1,5 @@
+import { UUID } from 'crypto';
+
 export class CreateActivoDto {
   nombre: string;
   descripcion: string;
@@ -6,4 +8,5 @@ export class CreateActivoDto {
   valorLibro: number;
   valorMercado: number;
   estado: string;
+  ubicacion: UUID;
 }

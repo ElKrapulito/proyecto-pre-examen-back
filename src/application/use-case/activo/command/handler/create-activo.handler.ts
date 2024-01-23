@@ -24,6 +24,7 @@ export class CreateActivoHandler
       createActivoDto.valorLibro,
       createActivoDto.valorMercado,
       createActivoDto.estado,
+      createActivoDto.ubicacion,
     );
     const saveActivo = this.publisher.mergeObjectContext(
       await this.activoRepo.save(newActivo),

@@ -1,4 +1,6 @@
+import { UUID } from 'crypto';
 import { Activo } from '../../models/implementations/activo.model';
+import { UbicacionAbstract } from '../../models/abstracts/ubicacion.abstract';
 export interface IActivoFactory {
   createActivo(
     nombre: string,
@@ -8,6 +10,7 @@ export interface IActivoFactory {
     valorLibro: number,
     valorMercado: number,
     estado: string,
+    ubicacion: UbicacionAbstract | UUID,
   ): Activo;
 }
 
