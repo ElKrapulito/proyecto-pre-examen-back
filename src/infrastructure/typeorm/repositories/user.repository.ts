@@ -4,7 +4,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { IUserRepository } from '../../../domain/repositories/iuser.repository';
 import { UserAbstract } from '../../../domain/models/abstracts/user.abstract';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class UserRepository
   extends BaseRepositoryTypeOrm<UserEntity>
   implements IUserRepository

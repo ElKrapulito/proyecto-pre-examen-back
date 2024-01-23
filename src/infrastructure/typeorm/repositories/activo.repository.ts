@@ -11,7 +11,7 @@ export class ActivoRepository
   implements IActivoRepository
 {
   constructor(
-    @InjectRepository(ActivoRepository)
+    @InjectRepository(ActivoEntity)
     private activoRepository: Repository<ActivoEntity>,
   ) {
     super(activoRepository);

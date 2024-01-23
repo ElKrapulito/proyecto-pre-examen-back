@@ -1,7 +1,7 @@
 import { UUID } from 'crypto';
 import { ActivoAbstract } from '../../../domain/models/abstracts/activo.abstract';
-import { Column, PrimaryColumn } from 'typeorm';
-
+import { Column, PrimaryColumn, Entity } from 'typeorm';
+@Entity({ name: 'activos' })
 export class ActivoEntity extends ActivoAbstract {
   @PrimaryColumn()
   id: UUID;
