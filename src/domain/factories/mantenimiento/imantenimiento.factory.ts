@@ -1,5 +1,6 @@
 import { Mantenimiento } from '../../models/implementations/mantenimiento.model';
 import { ActivoAbstract } from '../../models/abstracts/activo.abstract';
+import { UUID } from 'crypto';
 export interface IMantenimientoFactory {
   createMantenimiento(
     tipoMantenimiento: string,
@@ -7,7 +8,7 @@ export interface IMantenimientoFactory {
     fechaEjecucion: Date,
     costo: number,
     estado: boolean,
-    activo: ActivoAbstract,
+    activo: ActivoAbstract | UUID,
   ): Mantenimiento;
 }
 

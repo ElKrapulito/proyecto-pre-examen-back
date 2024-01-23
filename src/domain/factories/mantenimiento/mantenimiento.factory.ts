@@ -1,6 +1,7 @@
 import { ActivoAbstract } from 'src/domain/models/abstracts/activo.abstract';
 import { Mantenimiento } from 'src/domain/models/implementations/mantenimiento.model';
 import { IMantenimientoFactory } from './imantenimiento.factory';
+import { UUID } from 'crypto';
 
 export class MantenimientoFactory implements IMantenimientoFactory {
   createMantenimiento(
@@ -9,7 +10,7 @@ export class MantenimientoFactory implements IMantenimientoFactory {
     fechaEjecucion: Date,
     costo: number,
     estado: boolean,
-    activo: ActivoAbstract,
+    activo: ActivoAbstract | UUID,
   ): Mantenimiento {
     return new Mantenimiento(
       tipoMantenimiento,

@@ -8,7 +8,7 @@ export class Mantenimiento extends MantenimientoAbstract {
   fechaEjecucion: Date;
   costo: number;
   estado: boolean;
-  activo: ActivoAbstract;
+  activo: ActivoAbstract | UUID;
   id: UUID;
   constructor(
     tipoMantenimiento: string,
@@ -16,7 +16,7 @@ export class Mantenimiento extends MantenimientoAbstract {
     fechaEjecucion: Date,
     costo: number,
     estado: boolean,
-    activo: ActivoAbstract,
+    activo: ActivoAbstract | UUID,
   ) {
     super();
     this.tipoMantenimiento = tipoMantenimiento;
